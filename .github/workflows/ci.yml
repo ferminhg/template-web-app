@@ -6,7 +6,7 @@ env:
   NODE_VERSION: 18
 
 jobs:
-  linting:
+  ci:
     name: CI Steps
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ env.NODE_VERSION }}
-      - name: Code Checkout
+      - name: checkout
         uses: actions/checkout@v2
       - name: npm install
         run: |
