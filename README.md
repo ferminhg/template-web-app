@@ -1,4 +1,14 @@
 ## Web-app template skeleton
+[![Node CI](https://github.com/ferminhg/template-web-app/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ferminhg/template-web-app/actions/workflows/ci.yml)
+
+**TO-DO**
+
+- [ ] Add Design System
+- [ ] Add Supabase Auth
+- [ ] Add Supabase DB
+- [ ] Add Tracking library
+- [ ] Add web-performance GA
+
 
 **🔧 Stack**
 - Nextjs
