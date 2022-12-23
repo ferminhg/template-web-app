@@ -1,12 +1,13 @@
 ## Web-app template skeleton
 
-Template based on:
-
+**🔧 Stack**
 - Nextjs
 - Typescript
-- Deploy on Vercel: [https://template-web-app.vercel.app/](https://template-web-app.vercel.app/)
-- eslint
 
+**⚙️ CI/CD**
+- Deploy on Vercel: [https://template-web-app.vercel.app/](https://template-web-app.vercel.app/)
+- GA:
+  - ESlint
 
 ### Commands
 
@@ -15,7 +16,6 @@ Run locally: `npm run dev`
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Run unit lint:  `npm run lint`
-
 
 Run unit tests:  `npm run tests`
 
