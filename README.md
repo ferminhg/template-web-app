@@ -19,6 +19,9 @@
 - GA:
   - ESlint
 
+**⚙️ Monitoring**
+- Sentry: [https://sentry.io/organizations/muka/](https://sentry.io/organizations/muka/)
+
 ### Commands
 
 Run locally: `npm run dev`
