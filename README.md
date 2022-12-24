@@ -3,14 +3,13 @@
 
 **TO-DO**
 - [ ] Add Design System
-- [ ] Add Supabase Auth
 - [ ] Add Supabase DB
 
 
 **🔧 Stack**
 - Nextjs
 - Typescript
-
+- [Supabase](https://app.supabase.com/project/ippuhvjambzzolfevvsn)
 
 **⚙️ CI/CD**
 - Deploy on Vercel: [https://template-web-app.vercel.app/](https://template-web-app.vercel.app/)
