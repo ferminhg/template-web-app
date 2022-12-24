@@ -2,22 +2,20 @@
 [![Node CI](https://github.com/ferminhg/template-web-app/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/ferminhg/template-web-app/actions/workflows/ci.yml)
 
 **TO-DO**
-
 - [ ] Add Design System
 - [ ] Add Supabase Auth
 - [ ] Add Supabase DB
-- [ ] Add Tracking library
-- [ ] Add SSR example
 
 
 **🔧 Stack**
 - Nextjs
 - Typescript
 
+
 **⚙️ CI/CD**
 - Deploy on Vercel: [https://template-web-app.vercel.app/](https://template-web-app.vercel.app/)
-- GA:
-  - ESlint
+- GA
+
 
 **⚙️ Monitoring**
 - Sentry: [https://sentry.io/organizations/muka/](https://sentry.io/organizations/muka/)
@@ -41,3 +39,5 @@ Run unit tests:  `npm run tests`
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
+- Supabase How to setup Supabase Auth: [https://supabase.com/docs/guides/getting-started/tutorials/with-nextjs](https://supabase.com/docs/guides/getting-started/tutorials/with-nextjs)
+- 
