@@ -7,7 +7,7 @@
 - [ ] Add Supabase Auth
 - [ ] Add Supabase DB
 - [ ] Add Tracking library
-- [ ] Add web-performance GA
+- [ ] Add SSR example
 
 
 **🔧 Stack**
