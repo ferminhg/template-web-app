@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react'
-import Home from '../../../pages'
+import Example from '../../../pages/example'
 
-describe('Home', () => {
+describe('Example', () => {
     it('renders a heading', () => {
-        const { container } = render(<Home />)
+        const { container } = render(<Example />)
         const heading = screen.getByRole('heading', {
             name: /Web-app Template/i,
         })
