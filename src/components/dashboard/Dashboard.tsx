@@ -1,10 +1,10 @@
-import {Check, Error, Lock, Unlock, Start, Watchers, Forks} from "./Icons"
-
-import styles from './Dashboard.module.scss'
-import { GitHubApiExampleRepository } from "../../infrastructure/GithubAPIExampleRepository"
-import {config} from '../../devdash_config'
+import {Check, Error, Forks, Lock, Start, Unlock, Watchers} from "./Icons"
 import { useEffect, useState } from "react"
+
+import { GitHubApiExampleRepository } from "../../infrastructure/GithubApiExampleRepository"
 import { GitHubApiResponses } from "../../infrastructure/GitHubApiResponse"
+import {config} from '../../devdash_config'
+import styles from './Dashboard.module.scss'
 
 const isoToReadableDate = (lastUpdate: string): string => {
 	const lastUpdateDate = new Date(lastUpdate)
