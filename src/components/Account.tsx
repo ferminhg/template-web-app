@@ -3,7 +3,7 @@ import { useUser, useSupabaseClient, Session } from '@supabase/auth-helpers-reac
 import { Database } from '../../utils/database.types'
 type Profiles = Database['public']['Tables']['profiles']['Row']
 
-export default function Account({ session }: { session: Session }) {
+export function Account({ session }: { session: Session }) {
     const supabase = useSupabaseClient<Database>()
     const user = useUser()
     const [loading, setLoading] = useState(true)

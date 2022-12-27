@@ -1,9 +1,9 @@
 import {Auth, ThemeSupa} from "@supabase/auth-ui-react";
 import {useSession, useSupabaseClient} from "@supabase/auth-helpers-react";
-import Account from "./Account";
+import {Account} from "./Account";
 
 
-export default function LoginAuth() {
+export function LoginAuth() {
     const session = useSession()
     const supabase = useSupabaseClient()
 

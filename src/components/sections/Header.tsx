@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function Header() {
+export function Header() {
     return (
             <Head>
                 <title>🚧 Template web app</title>
