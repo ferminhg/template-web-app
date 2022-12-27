@@ -1,7 +1,7 @@
 import {Check, Error, Forks, Lock, Start, Unlock, Watchers} from "./Icons"
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 
-import { GitHubApiExampleRepository } from "../../infrastructure/GithubApiExampleRepository"
+import { GitHubApiExampleRepository } from "../../infrastructure/GitHubApiExampleRepository"
 import { GitHubApiResponses } from "../../infrastructure/GitHubApiResponse"
 import {config} from '../../devdash_config'
 import styles from './Dashboard.module.scss'
