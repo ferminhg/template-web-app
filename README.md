@@ -3,7 +3,7 @@
 
 **TO-DO**
 - [ ] Add Design System
-- [ ] Add Supabase DB
+- [ ] Add Supabase DB Example
 
 
 **🔧 Stack**
