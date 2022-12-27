@@ -3,7 +3,8 @@ import { Footer } from "../src/components/sections/Footer"
 
 
 export function dashboard() {
-    return (<>
+    return (
+        <>
             <Dashboard/>
             <Footer/>
         </>)

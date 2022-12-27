@@ -1,23 +1,29 @@
 import {githubApiResponses} from "../../github_api_responses"
+import {InMemoryExampleRepository} from "../../infrastructure/InMemoryExampleRepository"
+
 import {Check, Error, Lock, Unlock, Start, Watchers, Forks} from "./Icons"
 
 import styles from './Dashboard.module.scss'
 
 const isoToReadableDate = (lastUpdate: string): string => {
-	const lastUpdateDate = new Date(lastUpdate);
-	const currentDate = new Date();
-	const diffDays = currentDate.getDate() - lastUpdateDate.getDate();
+	const lastUpdateDate = new Date(lastUpdate)
+	const currentDate = new Date()
+	const diffDays = currentDate.getDate() - lastUpdateDate.getDate()
 
 	if (diffDays === 0) {
-		return "today";
+		return "today"
 	}
 
 	if (diffDays > 30) {
-		return "more than a month ago";
+		return "more than a month ago"
 	}
 
-	return `${diffDays} days ago`;
-};
+	return `${diffDays} days ago`
+}
+
+
+const repository = new InMemoryExampleRepository()
+const repositories = repository.search()
 
 export function Dashboard() {
     const title = "Dashboard"
@@ -28,7 +34,7 @@ export function Dashboard() {
 				<h1>{title}</h1>
 			</header>
 			<section className={styles.container}>
-				{githubApiResponses.map((widget) => (
+				{repositories.map((widget) => (
 					<article className={styles.widget} key={widget.repositoryData.id}>
 						<header className={styles.widget__header}>
 							<a
