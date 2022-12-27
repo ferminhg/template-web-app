@@ -1,9 +1,10 @@
-import {githubApiResponses} from "../../github_api_responses"
-import {InMemoryExampleRepository} from "../../infrastructure/InMemoryExampleRepository"
-
 import {Check, Error, Lock, Unlock, Start, Watchers, Forks} from "./Icons"
 
 import styles from './Dashboard.module.scss'
+import { GitHubApiExampleRepository } from "../../infrastructure/GithubAPIExampleRepository"
+import {config} from '../../devdash_config'
+import { useEffect, useState } from "react"
+import { GitHubApiResponses } from "../../infrastructure/GitHubApiResponse"
 
 const isoToReadableDate = (lastUpdate: string): string => {
 	const lastUpdateDate = new Date(lastUpdate)
@@ -21,20 +22,26 @@ const isoToReadableDate = (lastUpdate: string): string => {
 	return `${diffDays} days ago`
 }
 
+const repository = new GitHubApiExampleRepository(config.github_access_token)
 
-const repository = new InMemoryExampleRepository()
-const repositories = repository.search()
 
 export function Dashboard() {
-    const title = "Dashboard"
+	const [gitHubData, setGitHubData] = useState<GitHubApiResponses[]>([])
+	const title = "Dashboard"
     
+	useEffect (() => {
+		repository
+		.search(config.widgets.map((widget) => widget.repository_url))
+		.then((response) => {setGitHubData(response)})
+	}, [])
+
     return (
 		<>
 			<header className={styles.container}>
 				<h1>{title}</h1>
 			</header>
 			<section className={styles.container}>
-				{repositories.map((widget) => (
+				{gitHubData.map((widget) => (
 					<article className={styles.widget} key={widget.repositoryData.id}>
 						<header className={styles.widget__header}>
 							<a
@@ -51,9 +58,9 @@ export function Dashboard() {
 						<div className={styles.widget__body}>
 							<div className={styles.widget__status}>
 								<p>Last update {isoToReadableDate(widget.repositoryData.updated_at)}</p>
-								{widget.CiStatus.workflow_runs.length > 0 && (
+								{widget.ciStatus.workflow_runs.length > 0 && (
 									<div>
-										{widget.CiStatus.workflow_runs[0].status === "completed" ? (
+										{widget.ciStatus.workflow_runs[0].status === "completed" ? (
 											<Check />
 										) : (
 											<Error />
